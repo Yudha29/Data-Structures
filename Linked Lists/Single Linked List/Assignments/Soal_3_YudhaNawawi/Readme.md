@@ -1,0 +1,4 @@
+Soal 3 - Insert before:
+
+Buatlah sebuah program linked list dengan record dan pointer untuk menginputkan data nama-nama teman anda. Proses input diakhiri ketika data yang diinputkan adalah data kosong. Tampilkan jumlah datanya (opsional). Proses berikutnya adalah tampilkan semua data, berikut alamat pointer nya dan alamat link ke node berikut.
+Selanjutnya program akan menanyakan data yang dicari, kemudian program harus dapat mencari data yang diinginkan dan menampilkannya berikut alamat pointernya. Pencarian data akan diakhiri ketika mengenter data kosong, dan langsung keluar dari program. Setelah data diketemukan, program dapat dilakukan untuk menginputkan data yang akan disisipkan sebagi node baru sebelum node yang berisi data hasil pencarian data di atas. Jika data yang dicari tidak diketemukan, tampilkan informasi data tidak diketemukan.

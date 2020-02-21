@@ -1,0 +1,3 @@
+Soal 4 - Hapus node:
+
+Buatlah sebuah program linked list dengan record dan pointer untuk menginputkan data nama-nama teman anda. Proses input diakhiri ketika data yang diinputkan adalah data kosong. Tampilkan jumlah datanya (opsional). Proses berikutnya adalah tampilkan semua data, berikut alamat pointer nya dan alamat link ke node berikut. Selanjutnya program akan menanyakan data yang akan dihapus, kemudian program harus dapat mencari data yang diinginkan dan menghapusnya dari list, kemudian menampilkannya kembali isi list berikut alamat pointernya. Jika data yang dicari tidak diketemukan, tampilkan informasi data tidak diketemukan. Proses akan diakhiri ketika mengenter data kosong, dan langsung keluar dari program.
