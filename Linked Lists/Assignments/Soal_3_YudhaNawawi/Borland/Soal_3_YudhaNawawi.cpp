@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string.h>
-
-using namespace std;
+#include <string>
 
 struct Node {
 	char data[10];
@@ -60,11 +59,22 @@ void search() {
 		if (strcmp(tempData, ptr->data) == 0) {
 			exists = true;
 			cout << "Data yang dicari berada pada alamat " << ptr << '\n';
+			
+			Node * tempStruct = new Node;
+			
+			char tempString[10] = "";
+			cout << "\nInput data yang ingin disisipkan (input data kosong untuk kembali ke search) : ";
+			cin.getline(tempString, 9);
+			
+			if (strlen(tempString) == 0) break;
+			
+			strcpy(tempStruct->data, tempString);
+			tempStruct->next = ptr;
 	
 			if (ptr == head) {
-				head = ptr->next;
+				head = tempStruct;
 			} else {
-				prevPtr->next = ptr->next;
+				prevPtr->next = tempStruct;
 			}
 			
 			print();
