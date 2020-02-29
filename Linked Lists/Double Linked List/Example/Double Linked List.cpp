@@ -50,18 +50,15 @@ void fillLinkedList() {
 			head = tempNode;
 			//karena head adalah element pertama maka ia tidak punya elemen sebelumnya
 			head->prev = NULL;
-			//setelah itu set ptr yang sebelumnya menjadi head
-			ptr = head;
+			head->next = NULL;
 			
 			//saat ini kita hanya punya satu element jadi tail dan head akan mengacu pada satu element yang sama
 			tail = head;
 		} else {
-			//menjadikan isi elemen ptr sebagai tail yang mengacu pada elemen terakhir dalam linked list
-			ptr = tail;
 			//karena tail adalah elemen terakhir saat ini maka elemen sebelum tempNode adalah tail
 			tempNode->prev = tail;
 			//jika head telah di input maka kita akan menambahkan elemen baru sebagai elemen terakhir dalam linked list
-			ptr->next = tempNode;
+			tail->next = tempNode;
 			//lalu karena ini adalah elemen terakhir maka kita harus menjadikan tail sebagai tempNode
 			tail = tempNode;
 		}

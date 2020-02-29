@@ -64,7 +64,7 @@ void search() {
 			} else {
 				prevPtr->next = ptr->next;
 			}
-			
+				
 			print();
 			length++;
 			

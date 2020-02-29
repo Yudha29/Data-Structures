@@ -48,16 +48,11 @@ void fillLinkedList() {
 			//jika belum maka kita akan jadikan tempNode sebagai head
 			head = tempNode;
 			
-			//setelah itu set ptr yang sebelumnya menjadi head
-			ptr = head;
-			
 			//saat ini kita hanya punya satu element jadi tail dan head akan mengacu pada satu element yang sama
 			tail = head;
 		} else {
-			//menjadikan isi elemen ptr sebagai tail yang mengacu pada elemen terakhir dalam linked list
-			ptr = tail;
 			//jika head telah di input maka kita akan menambahkan elemen baru sebagai elemen terakhir dalam linked list
-			ptr->next = tempNode;
+			tail->next = tempNode;
 			//lalu karena ini adalah elemen terakhir maka kita harus menjadikan tail sebagai tempNode
 			tail = tempNode;
 		}
@@ -78,20 +73,31 @@ void insertString(char * outputText, string message) {
 
 //insert behind akan menambahkan sebuah elemen baru sebagai elemen terakhir dalam linked list
 void insertBehind() {
-	char dataInput[10] = "";
+//	char dataInput[10] = "";
+//	
+//	insertString(dataInput, "Masukan data yang ingin di input di bagian akhir");
+//	
+//	//membuat sebuah node baru
+//	Node * tempNode = new Node;
+//	//masukan atribute data dalam tempnode sebagai data yang di input
+//	strcpy(tempNode->data, dataInput);
+//	//karena insert behind akan menjadikan elemen yang di input sebagai elemen terakhir maka nextnya tidak mengacu ke manapun
+//	//jadi set saja sebagai null
+//	tempNode->next = NULL;
+//	//karena elemen baru telah di tambahkan sebagai elemen terakhir maka ubah elemen terakhirnya jadi tempNode
+//	tail->next = tempNode;
+//	tail = tail->next;
+	ptr = head;
+
+	while (ptr != NULL && ptr->next != NULL) {
+		ptr = ptr->next;
+	}
 	
-	insertString(dataInput, "Masukan data yang ingin di input di bagian akhir");
+	Node * temp = new Node;
+	strcpy(temp->data, "test");
+	temp->next = NULL;
 	
-	//membuat sebuah node baru
-	Node * tempNode = new Node;
-	//masukan atribute data dalam tempnode sebagai data yang di input
-	strcpy(tempNode->data, dataInput);
-	//karena insert behind akan menjadikan elemen yang di input sebagai elemen terakhir maka nextnya tidak mengacu ke manapun
-	//jadi set saja sebagai null
-	tempNode->next = NULL;
-	//karena elemen baru telah di tambahkan sebagai elemen terakhir maka ubah elemen terakhirnya jadi tempNode
-	tail->next = tempNode;
-	tail = tail->next;
+	ptr->next = temp;
 }
 
 //insert top akan menambahkan sebuah elemen baru sebagai elemen pertama dalam linked list
