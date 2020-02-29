@@ -4,8 +4,6 @@
 #include <string> //standar library untuk gunakan strcpy, strlen, agak mager nyebutinnya
 #include <conio.h> //yang pasti getch()
 
-using namespace std;
-
 struct Simpul {
 	char dat[10];
 	struct Simpul *next;

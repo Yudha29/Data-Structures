@@ -1,10 +1,8 @@
 #include <iostream> //standar library untuk input/output
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h> //standar library untuk gunakan system() dll
 #include <string.h> //standar library untuk gunakan strcpy, strlen, agak mager nyebutinnya
 #include <conio.h> //yang pasti getch()
-
-using namespace std;
 
 struct Simpul {
 	char dat[10];
