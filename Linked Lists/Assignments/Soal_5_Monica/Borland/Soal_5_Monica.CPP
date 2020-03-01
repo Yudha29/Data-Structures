@@ -151,7 +151,22 @@ main()
    		//cek lagi apakah data benar benar ditemukan
 		if((ptr!=NULL) && (strcmp(cari,ptr->dat)==0)) {
 			//jika iya maka print data yang ditemukan
-			cout <<"\nData "<<cari<<" ada pada alamat "<<ptr << " #yey ketemu" << endl;
+			struct Simpul *dataYangKetemu = ptr;
+			
+			do {
+   				//print seluruh datanya
+   				cout<<"["<<ptr->dat<<"]--> alamat Ptr ["<<ptr<<"] --> Next Ptr ["<<ptr->next<<"]"<<endl;
+   				ptr=ptr->next;
+   			
+   				/*
+				 * ubah menjadi ptr != dataYangDicari jika menggunakan while do maka tidak bisa
+				 * karena pada saat awal akan melakukan print ptr == dataYangDicari
+				 * namun dengan do while tidak ada masalah karena ia akan melakukan perulangan 1x sebelum cek kondisi
+				 * pada perulangan yang pertama itu data head akan di print
+				 * dan melakukan perubahan ptr yang sebelumnya mengacu ke head menjadi mengacu ke data setelah dataYangDicari
+				 * dan akan berhenti ketika ptr menjadi kembali data yang telah dicari
+				*/
+  			} while(ptr!=dataYangKetemu); //kondisi ini diubah
 		} else {
 			cout << "\nData yang anda cari tidak ditemukan. #hiks hiks" << endl;
 		}
