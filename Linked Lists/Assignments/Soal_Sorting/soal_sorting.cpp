@@ -49,15 +49,15 @@ int main() {
 	
 	ptr = head;
 	while (ptr != NULL) {
-		struct Node * helperPtr = ptr->next; 
+		struct Node * helperPtr = ptr; 
 		
-		while (helperPtr != NULL) {
-			if (strcmp(ptr->data, helperPtr->data) > 0) {
+		while (helperPtr != NULL && helperPtr->next != NULL) {
+			if (strcmp(helperPtr->data, helperPtr->next->data) > 0) {
 				char temp[10] = "";
-				strcpy(temp, ptr->data);
+				strcpy(temp, helperPtr->data);
 				
-				strcpy(ptr->data,helperPtr->data);
-				strcpy(helperPtr->data, temp);
+				strcpy(helperPtr->data,helperPtr->next->data);
+				strcpy(helperPtr->next->data, temp);
 			}
 			
 			helperPtr = helperPtr->next;
