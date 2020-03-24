@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Queue Linked List Base", "Queue Linked List Base\Queue Linked List Base.vcxproj", "{70E91AE8-8BCF-4080-9E62-D79531024ED0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Debug|x64.ActiveCfg = Debug|x64
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Debug|x64.Build.0 = Debug|x64
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Debug|x86.ActiveCfg = Debug|Win32
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Debug|x86.Build.0 = Debug|Win32
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Release|x64.ActiveCfg = Release|x64
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Release|x64.Build.0 = Release|x64
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Release|x86.ActiveCfg = Release|Win32
+		{70E91AE8-8BCF-4080-9E62-D79531024ED0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {302B0528-94F1-4352-A091-A97F21F12752}
+	EndGlobalSection
+EndGlobal
