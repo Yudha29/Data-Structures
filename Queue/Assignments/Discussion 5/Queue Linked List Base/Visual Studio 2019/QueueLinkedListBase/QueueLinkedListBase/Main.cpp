@@ -23,12 +23,17 @@ void print()
 	int i = 1, currentSize = size;
 	while (i <= currentSize) {
 		const int element = dequeue();
-		std::cout << "|\t" << element << "\t|" << '\n';
+		std::cout << element;
+
+		if (i != currentSize)
+			std::cout << "->";
 
 		enqueue(element);
 
 		i++;
 	}
+
+	std::cout << '\n';
 }
 
 void clear()

@@ -19,15 +19,14 @@ int size = 0, lastIndex = 0, firstIndex = 0;
 
 void print()
 {
-	int i = 1, currentSize = size;
-	while (i <= currentSize) {
-		int index = firstIndex;
-		const int element = dequeue();
-		std::cout << "data ke " << i << " pool[ " << index << " ] |\t" << element << "\t|" << '\n';
+	int i = firstIndex;
+	int j = 1;
+	const int currentSize = size;
+	while (j <= currentSize) {
+		std::cout << "data ke " << j << " pool[ " << i << " ] " << queue[i] << '\n';
 
-		enqueue(element);
-
-		i++;
+		i = getNextIndex(i);
+		j++;
 	}
 }
 
@@ -160,9 +159,13 @@ int main()
 		case 1:
 			addToQueue();
 			break;
-		case 2:
-			std::cout << "Data yang di pop : " << dequeue() << '\n';
+		case 2: {
+			const int tempIndex = firstIndex;
+			const int tempData = dequeue();
+			std::cout << "pool [" << tempIndex << "] " << tempData << " Be cleared ! next first pool " << firstIndex << '\n';
+			std::cout << "Data yang di dequeue : " << tempData << '\n';
 			break;
+		}
 		case 3:
 			std::cout << "Data teratas pada queue : " << firstEl() << '\n';
 			break;
